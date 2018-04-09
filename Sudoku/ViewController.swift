@@ -22,10 +22,10 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         
         let myad = MyAd(root: self)
         myad.ViewDidload()
-        //if(Utility.isAd2)
-        //{
-            setupDidload()
-        //}
+        if(Utility.isAd2)
+        {
+           setupDidload()
+        }
     }
     @IBAction func ShowADDrag(_ sender: Any) {
         Utility.OpenView(viewName: "AdView1", view: self)
@@ -368,7 +368,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         
         
         ShowAdmobBanner()
-        self.timerVPN = Timer.scheduledTimer(timeInterval: 20, target: self, selector: #selector(timerVPNMethodAutoAd), userInfo: nil, repeats: true)
+        //self.timerVPN = Timer.scheduledTimer(timeInterval: 20, target: self, selector: #selector(timerVPNMethodAutoAd), userInfo: nil, repeats: true)
         
         
     }
@@ -377,12 +377,14 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         
         //let viewController = appDelegate1.window!.rootViewController as! GameViewController
         let w = self.view.bounds.width
-        let h = self.view.bounds.height
+        //let h = self.view.bounds.height
         //        if(!AdmobBannerTop)
         //        {
         //            AdmobLocationY = h - 50
         //        }
-        gBannerView = GADBannerView(frame: CGRect(x:0,y:( h - 50) ,width: w,height: 50))
+        
+        //iphonex 50
+        gBannerView = GADBannerView(frame: CGRect(x:0,y: 40,width: w,height: 50))
         gBannerView?.adUnitID = Utility.GBannerAdUnit
         print(Utility.GBannerAdUnit)
         gBannerView?.delegate = self

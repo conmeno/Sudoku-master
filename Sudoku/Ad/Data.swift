@@ -18,7 +18,7 @@ class AdData {
     //google
     let gBanner : String = "ca-app-pub-4231967488784977/4495131401"
     let gFull : String = "ca-app-pub-4231967488784977/8737628744"
-    let TestDeviceID: String = ""
+    let TestDeviceID: String = "306c4973b4635eaa9a9d17df7b183667"
     
 
     //chartboost

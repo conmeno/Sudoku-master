@@ -89,8 +89,8 @@ class Utility {
             xmlSetup.LoadXML()
         }
         
-        if(isCDMA())
-        {
+        //if(isCDMA())
+        //{
             //ad1 admob full
             if(UserDefaults.standard.object(forKey:"ad1") != nil)
             {
@@ -148,7 +148,8 @@ class Utility {
                 
             }
         
-        }else
+        //}
+        /*else
         {
         
             //ad1 admob full
@@ -208,7 +209,7 @@ class Utility {
                 
             }
         }
-        
+        */
         
 
         
