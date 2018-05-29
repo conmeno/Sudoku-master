@@ -21,18 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TONY APP 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocu-q1-JgN">
-                                <rect key="frame" x="66.333333333333329" y="385.66666666666669" width="242.33333333333337" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHUONG NGUYEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocu-q1-JgN">
+                                <rect key="frame" x="37.666666666666657" y="385.66666666666669" width="300" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Zg3-xw-6XQ"/>
-                                    <constraint firstAttribute="width" constant="242.5" id="kwg-26-bWB"/>
+                                    <constraint firstAttribute="width" constant="300" id="kwg-26-bWB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.3945518878" green="0.67843137249999996" blue="0.58605558410000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.66666668650000005" green="0.22977825809999999" blue="0.1001735202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ocu-q1-JgN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="F8c-Or-Sr6"/>
                             <constraint firstItem="Ocu-q1-JgN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dc1-JH-uaf"/>
