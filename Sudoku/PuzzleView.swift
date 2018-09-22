@@ -94,10 +94,10 @@ class PuzzleView: UIView {
         }
         
         let boldFont = UIFont(name: "Helvetica-Bold", size: 30)
-        var fixedAttributes = [NSFontAttributeName : boldFont!, NSForegroundColorAttributeName : UIColor.black]
+        var fixedAttributes = [NSAttributedStringKey.font : boldFont!, NSAttributedStringKey.foregroundColor : UIColor.black]
         
         let pencilFont = UIFont(name: "Helvetica-Bold", size: 12)
-        let pencilAttributes = [NSFontAttributeName : pencilFont!, NSForegroundColorAttributeName : UIColor.black]
+        let pencilAttributes = [NSAttributedStringKey.font : pencilFont!, NSAttributedStringKey.foregroundColor : UIColor.black]
         
         let gridSize = boardRect.width
         let delta = gridSize/3
@@ -115,17 +115,17 @@ class PuzzleView: UIView {
                     
                     // Check to see if the number is fixed. Print red if it is
                     if puzzle!.numberIsFixedAtRow(row: row, column: col) {
-                        fixedAttributes = [NSFontAttributeName : boldFont!, NSForegroundColorAttributeName : UIColor.blue]
+                        fixedAttributes = [NSAttributedStringKey.font : boldFont!, NSAttributedStringKey.foregroundColor : UIColor.blue]
                     }
                     else if showConflictingCells && puzzle!.isConflictingEntryAtCell(number: puzzle!.puzzle[row][col].number, row: row, column: col) {
-                        fixedAttributes = [NSFontAttributeName : boldFont!, NSForegroundColorAttributeName : UIColor.red]
+                        fixedAttributes = [NSAttributedStringKey.font : boldFont!, NSAttributedStringKey.foregroundColor : UIColor.red]
                     }
                     else {
-                        fixedAttributes = [NSFontAttributeName : boldFont!, NSForegroundColorAttributeName : UIColor.black]
+                        fixedAttributes = [NSAttributedStringKey.font : boldFont!, NSAttributedStringKey.foregroundColor : UIColor.black]
                     }
                     
                     let text = "\(puzzle!.puzzle[row][col].number)" as NSString
-                    let textSize = text.size(attributes: fixedAttributes)
+                    let textSize = text.size(withAttributes: fixedAttributes)
                     let x = gridOrigin.x + CGFloat(col)*d + 0.5*(d - textSize.width)
                     let y = gridOrigin.y + CGFloat(row)*d + 0.5*(d - textSize.height)
                     let textRect = CGRect(x: x, y: y, width: textSize.width, height: textSize.height)
@@ -141,7 +141,7 @@ class PuzzleView: UIView {
                                     
                             if (puzzle?.isSetPencil(n: n, row: row, column: col))! {
                                 let text = "\(n)" as NSString
-                                let textSize = text.size(attributes: pencilAttributes)
+                                let textSize = text.size(withAttributes: pencilAttributes)
                                 
                                 let sr = s*CGFloat(r)*2 + s
                                 let sc = s*CGFloat(c)*2 + s
@@ -160,7 +160,7 @@ class PuzzleView: UIView {
         }
     }
     
-    func handleTap(_ sender : UIGestureRecognizer) {
+    @objc func handleTap(_ sender : UIGestureRecognizer) {
         let tapPoint = sender.location(in: self)
         //NSLog("Tap!")
         
