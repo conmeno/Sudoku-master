@@ -117,7 +117,7 @@
 		AC3E4BCE1E64A7C1001ADC1F /* hard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hard.plist; sourceTree = "<group>"; };
 		AC3E4BD01E64A7C6001ADC1F /* simple.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = simple.plist; sourceTree = "<group>"; };
 		AC407EA71E60E2E300582CEE /* SudokuPuzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SudokuPuzzle.swift; sourceTree = "<group>"; };
-		AC90B9AE1E4A395B00FCE8F8 /* Sudoku Hard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sudoku Hard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC90B9AE1E4A395B00FCE8F8 /* Sudoku Classic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sudoku Classic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC90B9B11E4A395B00FCE8F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC90B9B31E4A395B00FCE8F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC90B9B61E4A395B00FCE8F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -250,7 +250,7 @@
 		AC90B9AF1E4A395B00FCE8F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC90B9AE1E4A395B00FCE8F8 /* Sudoku Hard.app */,
+				AC90B9AE1E4A395B00FCE8F8 /* Sudoku Classic.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,9 +277,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AC90B9AD1E4A395B00FCE8F8 /* Sudoku Hard */ = {
+		AC90B9AD1E4A395B00FCE8F8 /* Sudoku Classic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC90B9C01E4A395B00FCE8F8 /* Build configuration list for PBXNativeTarget "Sudoku Hard" */;
+			buildConfigurationList = AC90B9C01E4A395B00FCE8F8 /* Build configuration list for PBXNativeTarget "Sudoku Classic" */;
 			buildPhases = (
 				AC90B9AA1E4A395B00FCE8F8 /* Sources */,
 				AC90B9AB1E4A395B00FCE8F8 /* Frameworks */,
@@ -289,9 +289,9 @@
 			);
 			dependencies = (
 			);
-			name = "Sudoku Hard";
+			name = "Sudoku Classic";
 			productName = SudokuLayout;
-			productReference = AC90B9AE1E4A395B00FCE8F8 /* Sudoku Hard.app */;
+			productReference = AC90B9AE1E4A395B00FCE8F8 /* Sudoku Classic.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -306,13 +306,13 @@
 				TargetAttributes = {
 					AC90B9AD1E4A395B00FCE8F8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6SZC32EP3F;
+						DevelopmentTeam = 597LVZ4LQD;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = AC90B9A91E4A395B00FCE8F8 /* Build configuration list for PBXProject "Sudoku Hard" */;
+			buildConfigurationList = AC90B9A91E4A395B00FCE8F8 /* Build configuration list for PBXProject "Sudoku Classic" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -325,7 +325,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC90B9AD1E4A395B00FCE8F8 /* Sudoku Hard */,
+				AC90B9AD1E4A395B00FCE8F8 /* Sudoku Classic */,
 			);
 		};
 /* End PBXProject section */
@@ -485,7 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 6SZC32EP3F;
+				DEVELOPMENT_TEAM = 597LVZ4LQD;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -494,7 +494,7 @@
 				INFOPLIST_FILE = Sudoku/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.phuongnguyenapp2018.sudoku;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phuongnt2018.sudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sudoku/Ad/Bridging-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -508,7 +508,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 6SZC32EP3F;
+				DEVELOPMENT_TEAM = 597LVZ4LQD;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -517,7 +517,7 @@
 				INFOPLIST_FILE = Sudoku/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.phuongnguyenapp2018.sudoku;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phuongnt2018.sudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sudoku/Ad/Bridging-header.h";
 				SWIFT_VERSION = 3.0;
@@ -528,7 +528,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AC90B9A91E4A395B00FCE8F8 /* Build configuration list for PBXProject "Sudoku Hard" */ = {
+		AC90B9A91E4A395B00FCE8F8 /* Build configuration list for PBXProject "Sudoku Classic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC90B9BE1E4A395B00FCE8F8 /* Debug */,
@@ -537,7 +537,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC90B9C01E4A395B00FCE8F8 /* Build configuration list for PBXNativeTarget "Sudoku Hard" */ = {
+		AC90B9C01E4A395B00FCE8F8 /* Build configuration list for PBXNativeTarget "Sudoku Classic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC90B9C11E4A395B00FCE8F8 /* Debug */,
