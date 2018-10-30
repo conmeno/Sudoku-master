@@ -52,6 +52,10 @@
 		963E5EF51FA1E9CF001D8FC3 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963E5EDC1FA1E9CF001D8FC3 /* SpriteKit.framework */; };
 		963E5EF61FA1E9CF001D8FC3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963E5EDD1FA1E9CF001D8FC3 /* StoreKit.framework */; };
 		963E5EF71FA1E9CF001D8FC3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963E5EDE1FA1E9CF001D8FC3 /* WebKit.framework */; };
+		965D43A721569DA4000D3CF6 /* TappxFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965D43A621569DA4000D3CF6 /* TappxFramework.framework */; };
+		965D43A92156A167000D3CF6 /* libobjc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 965D43A82156A166000D3CF6 /* libobjc.tbd */; };
+		965D43AB2156A178000D3CF6 /* libobjc.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 965D43AA2156A178000D3CF6 /* libobjc.A.tbd */; };
+		965D43AD2157F023000D3CF6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965D43AC2157F022000D3CF6 /* JavaScriptCore.framework */; };
 		AC131F171E68B93000CC2FD2 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC131F161E68B93000CC2FD2 /* ButtonsView.swift */; };
 		AC3E4BCF1E64A7C1001ADC1F /* hard.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC3E4BCE1E64A7C1001ADC1F /* hard.plist */; };
 		AC3E4BD11E64A7C6001ADC1F /* simple.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC3E4BD01E64A7C6001ADC1F /* simple.plist */; };
@@ -113,6 +117,10 @@
 		963E5EDC1FA1E9CF001D8FC3 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		963E5EDD1FA1E9CF001D8FC3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		963E5EDE1FA1E9CF001D8FC3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		965D43A621569DA4000D3CF6 /* TappxFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TappxFramework.framework; sourceTree = "<group>"; };
+		965D43A82156A166000D3CF6 /* libobjc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libobjc.tbd; path = usr/lib/libobjc.tbd; sourceTree = SDKROOT; };
+		965D43AA2156A178000D3CF6 /* libobjc.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libobjc.A.tbd; path = usr/lib/libobjc.A.tbd; sourceTree = SDKROOT; };
+		965D43AC2157F022000D3CF6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		AC131F161E68B93000CC2FD2 /* ButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		AC3E4BCE1E64A7C1001ADC1F /* hard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hard.plist; sourceTree = "<group>"; };
 		AC3E4BD01E64A7C6001ADC1F /* simple.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = simple.plist; sourceTree = "<group>"; };
@@ -132,6 +140,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965D43AD2157F023000D3CF6 /* JavaScriptCore.framework in Frameworks */,
+				965D43A721569DA4000D3CF6 /* TappxFramework.framework in Frameworks */,
+				965D43AB2156A178000D3CF6 /* libobjc.A.tbd in Frameworks */,
+				965D43A92156A167000D3CF6 /* libobjc.tbd in Frameworks */,
 				961552CC207B63820076FFDA /* CoreMedia.framework in Frameworks */,
 				961552CD207B63820076FFDA /* MediaAccessibility.framework in Frameworks */,
 				961552C9207B63810076FFDA /* MediaPlayer.framework in Frameworks */,
@@ -195,6 +207,9 @@
 		963E5EC51FA1E9CF001D8FC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				965D43AC2157F022000D3CF6 /* JavaScriptCore.framework */,
+				965D43AA2156A178000D3CF6 /* libobjc.A.tbd */,
+				965D43A82156A166000D3CF6 /* libobjc.tbd */,
 				961552CA207B63810076FFDA /* CoreMedia.framework */,
 				961552CB207B63810076FFDA /* MediaAccessibility.framework */,
 				961F6A831FA7223400507780 /* SafariServices.framework */,
@@ -236,6 +251,7 @@
 		AC90B9A51E4A395B00FCE8F8 = {
 			isa = PBXGroup;
 			children = (
+				965D43A621569DA4000D3CF6 /* TappxFramework.framework */,
 				963E5EAA1FA1E897001D8FC3 /* AdColony.framework */,
 				963E5EAB1FA1E897001D8FC3 /* AmazonAd.framework */,
 				963E5EAC1FA1E897001D8FC3 /* Chartboost.framework */,
@@ -495,6 +511,11 @@
 		AC90B9C11E4A395B00FCE8F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+					armv7,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 597LVZ4LQD;
@@ -506,6 +527,11 @@
 				INFOPLIST_FILE = Sudoku/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.phuongnt2018.sudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sudoku/Ad/Bridging-header.h";
@@ -513,12 +539,18 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7 armv7s i386 armv6";
 			};
 			name = Debug;
 		};
 		AC90B9C21E4A395B00FCE8F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+					armv7,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 597LVZ4LQD;
@@ -530,12 +562,18 @@
 				INFOPLIST_FILE = Sudoku/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.phuongnt2018.sudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sudoku/Ad/Bridging-header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7 armv7s i386 armv6";
 			};
 			name = Release;
 		};
