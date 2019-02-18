@@ -9,7 +9,6 @@
 import Foundation
 import GoogleMobileAds
 
-
 class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAdViewDelegate {
     
     
@@ -19,7 +18,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     var interstitial: GADInterstitial!
     var interstitialAmazon: AmazonAdInterstitial!
     
-    var tappxInterstitial: TappxInterstitialViewController?
+    
     var timerVPN:Timer?
     var timerAd10:Timer?
     var timerAd30:Timer? //for all ad
@@ -198,10 +197,6 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 showChartRewardVideo()            }
             
             
-            
-        }
-        if(Utility.isAd8){
-           
             
         }
         

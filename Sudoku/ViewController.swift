@@ -8,12 +8,11 @@
 
 import UIKit
 import GoogleMobileAds
-
 class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDelegate {
 
     var pencilEnabled : Bool = false  // controller property
     var gameWon : Bool = false // Check whether the game has been won or not
-    var tappxInterstitial: TappxInterstitialViewController?
+    
     @IBOutlet weak var puzzleView: PuzzleView!
     @IBOutlet weak var buttonsView: ButtonsView!
     
@@ -27,8 +26,6 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         {
            setupDidload()
         }
-        self.tappxInterstitial = TappxInterstitialViewController(delegate: self); self.tappxInterstitial?.setAutoShowWhenReady(true)
-        self.tappxInterstitial?.load() 
     }
     @IBAction func ShowADDrag(_ sender: Any) {
         Utility.OpenView(viewName: "AdView1", view: self)
@@ -448,9 +445,4 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
     ///=====================================================================================
     ///=====================================================================================
 }
-extension ViewController: TappxInterstitialViewControllerDelegate {
-    
-    func presentViewController() -> UIViewController! {
-        return self;
-    }
-}
+

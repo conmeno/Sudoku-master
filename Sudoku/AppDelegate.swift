@@ -77,7 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if(Utility.isAd8)
         {
-            TappxFramework.addTappxKey("**YOUR-APP-KEY**")
+            
         }
         
         //============================

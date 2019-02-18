@@ -21,7 +21,8 @@
 #import <AmazonAd/AmazonAdOptions.h>
 #import <RevMobAds/RevMobAds.h>
 #import <AdColony/AdColony.h>
-#import <TappxFramework/TappxAds.h>
+
+
 
 
 
