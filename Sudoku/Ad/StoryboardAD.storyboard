@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Ad Manager View-->
         <scene sceneID="MDb-VE-VLt">
             <objects>
-                <viewController storyboardIdentifier="AdView1" id="mQ7-qi-MMn" customClass="AdManagerView" customModule="Sudoku_Classic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdView1" id="mQ7-qi-MMn" customClass="AdManagerView" customModule="Sudoku_Hard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RkD-vD-QMJ"/>
                         <viewControllerLayoutGuide type="bottom" id="lsm-U3-Fee"/>
@@ -91,22 +91,8 @@
                                     <action selector="sw7ActionWithSender:" destination="mQ7-qi-MMn" eventType="valueChanged" id="kK1-bS-4qp"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAb-HR-bvt">
-                                <rect key="frame" x="208" y="199" width="61" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="acs-5o-KQd">
-                                <rect key="frame" x="153" y="199" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="sw8ActionWithSender:" destination="mQ7-qi-MMn" eventType="valueChanged" id="xMO-EJ-8BS"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Revmob" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mD-oP-LKb">
-                                <rect key="frame" x="60" y="199" width="80" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="new Admob Full" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mD-oP-LKb">
+                                <rect key="frame" x="60" y="199" width="154" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -178,6 +164,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAb-HR-bvt">
+                                <rect key="frame" x="60" y="240" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="acs-5o-KQd">
+                                <rect key="frame" x="5" y="240" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sw8ActionWithSender:" destination="mQ7-qi-MMn" eventType="valueChanged" id="xMO-EJ-8BS"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -197,8 +197,6 @@
                                 <exclude reference="B9w-ww-hV3"/>
                                 <exclude reference="GQf-E4-aVG"/>
                                 <exclude reference="Z9P-m0-bya"/>
-                                <exclude reference="LAb-HR-bvt"/>
-                                <exclude reference="acs-5o-KQd"/>
                                 <exclude reference="0mD-oP-LKb"/>
                                 <exclude reference="Lnt-f8-sMg"/>
                                 <exclude reference="spA-Qb-dIS"/>
@@ -207,6 +205,8 @@
                                 <exclude reference="Iz3-YZ-RMa"/>
                                 <exclude reference="FVn-3W-dcs"/>
                                 <exclude reference="WKv-dD-nOF"/>
+                                <exclude reference="LAb-HR-bvt"/>
+                                <exclude reference="acs-5o-KQd"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -221,8 +221,6 @@
                                 <include reference="B9w-ww-hV3"/>
                                 <include reference="GQf-E4-aVG"/>
                                 <include reference="Z9P-m0-bya"/>
-                                <include reference="LAb-HR-bvt"/>
-                                <include reference="acs-5o-KQd"/>
                                 <include reference="0mD-oP-LKb"/>
                                 <include reference="Lnt-f8-sMg"/>
                                 <include reference="spA-Qb-dIS"/>
@@ -231,6 +229,8 @@
                                 <include reference="Iz3-YZ-RMa"/>
                                 <include reference="FVn-3W-dcs"/>
                                 <include reference="WKv-dD-nOF"/>
+                                <include reference="LAb-HR-bvt"/>
+                                <include reference="acs-5o-KQd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -245,8 +245,6 @@
                                 <include reference="B9w-ww-hV3"/>
                                 <include reference="GQf-E4-aVG"/>
                                 <include reference="Z9P-m0-bya"/>
-                                <include reference="LAb-HR-bvt"/>
-                                <include reference="acs-5o-KQd"/>
                                 <include reference="0mD-oP-LKb"/>
                                 <include reference="Lnt-f8-sMg"/>
                                 <include reference="spA-Qb-dIS"/>
@@ -257,6 +255,8 @@
                                 <include reference="Iz3-YZ-RMa"/>
                                 <include reference="FVn-3W-dcs"/>
                                 <include reference="WKv-dD-nOF"/>
+                                <include reference="LAb-HR-bvt"/>
+                                <include reference="acs-5o-KQd"/>
                             </mask>
                         </variation>
                     </view>

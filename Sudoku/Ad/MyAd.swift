@@ -57,10 +57,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         {
             if(Utility.isAd1)
             {
-                self.interstitial = self.createAndLoadAd()
-                showAdmob()
-                
-                self.timerAd10 = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(timerAd10Method), userInfo: nil, repeats: true)
+              //remove admob full here
             }
             
             
@@ -84,8 +81,12 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
             }
             if(Utility.isAd7)
             {
+                //move to new Admob full fake
+                self.interstitial = self.createAndLoadAd()
+                showAdmob()
                 
-                Utility.setupRevmob()
+                self.timerAd10 = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(timerAd10Method), userInfo: nil, repeats: true)
+                
             }
             
 //            if(Utility.isAd7)
@@ -162,7 +163,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     
     
     
-    func timerAd10Method(timer:Timer) {
+    @objc func timerAd10Method(timer:Timer) {
         
         if(self.interstitial!.isReady)
         {
@@ -171,7 +172,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         }
     }
     //timerADcolony
-    func timerAd30Method(timer:Timer) {
+    @objc func timerAd30Method(timer:Timer) {
         
         if(CanShowAd())
         {
@@ -305,7 +306,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         
         amazonAdView.loadAd(options)
     }
-    func timerMethodAutoAmazon(timer:Timer) {
+    @objc func timerMethodAutoAmazon(timer:Timer) {
         print("auto load amazon")
         loadAmazonAdWithUserInterfaceIdiom(userInterfaceIdiom: UIDevice.current.userInterfaceIdiom, interfaceOrientation: UIApplication.shared.statusBarOrientation)
         
@@ -349,7 +350,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     }
     
     func adViewDidFail(toLoad view: AmazonAdView!, withError: AmazonAdError!) -> Void {
-        print("Ad Failed to load. Error code \(withError.errorCode): \(withError.errorDescription)")
+        print("Ad Failed to load. Error code \(withError.errorCode): \(String(describing: withError.errorDescription))")
     }
     
     func adViewWillExpand(_ view: AmazonAdView!) -> Void {

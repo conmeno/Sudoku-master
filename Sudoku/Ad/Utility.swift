@@ -10,7 +10,7 @@ import Foundation
 
 class Utility {
     
-    static var isAd1 = false//admob full
+    static var isAd1 = false//NONE
     static var isAd2 = false//Admob Banner
     static var isAd3 = true//Amazon
     static var isAd4 = false//Adcolony
@@ -18,7 +18,7 @@ class Utility {
     static var isAd5 = false// ==>Chartboost
     static var isAd6 = false//revmob
     
-    static var isAd7 = false //none
+    static var isAd7 = false //Admob full //new
     static var isAd8 = false //none
     
     
@@ -66,7 +66,7 @@ class Utility {
         AdcolonyAppID = adData.AdcolonyAppID
         AdcolonyZoneID = adData.AdcolonyZoneID
         AdmobTestDeviceID = adData.TestDeviceID
-        RevmobID = adData.RevmobID
+      
        
         CBAppID = adData.cAppID
         CBSign = adData.cSign
@@ -327,50 +327,7 @@ class Utility {
     
  
     
-    static func setupRevmob()
-    {
-        
-        let completionBlock: () -> Void = {
-            RevMobAds.session().showFullscreen()
-        
-            
-            self.RevmobFull()
-            self.RevmobVideo()
-            //RevmobPopup()
-            self.RevmobBanner()
-        }
-//        let errorBlock: (NSError!) -> Void = {error in
-//            // check the error
-//            print(error);
-//        }
-        RevMobAds.startSession(withAppID: Utility.RevmobID,
-            withSuccessHandler: completionBlock, andFailHandler: nil);
-        
-    }
-    static func RevmobBanner()
-    {
-        let banner = RevMobAds.session()?.bannerView()
-        banner?.frame = CGRect(x: 0,y: 70,width: 320,height: 50);
-        
-        RevMobAds.session()?.showBanner();
-    }
-    static func RevmobFull()
-    {
-        RevMobAds.session()?.showFullscreen();
-    }
-    static func RevmobPopup()
-    {
-        RevMobAds.session()?.showPopup();
-        
-    }
-    static func RevmobVideo()
-    {
-        //To load
-        RevMobAds.session()?.fullscreen().loadVideo()
-        
-        //To show
-        RevMobAds.session()?.fullscreen().showVideo()
-    }
+   
     
 //    static func CanShowAd()->Bool
 //    {

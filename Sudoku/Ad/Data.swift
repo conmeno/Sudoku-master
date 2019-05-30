@@ -13,9 +13,10 @@ class AdData {
     //5120 game
     
     //URL setup online
-     let AdURL: String = "http://webappchannel.com/v5/hard-sodoku-v5.txt"
+     let AdURL: String = "http://webappchannel.com/v6/hard-sodoku-v6.txt"
     
-    //google
+    //google1
+    
     let gBanner : String = ""
     let gFull : String = ""
     let TestDeviceID: String = "306c4973b4635eaa9a9d17df7b183667"
@@ -32,8 +33,6 @@ class AdData {
     let AdcolonyZoneID: String = ""
     
     //revmob appID
-    let RevmobID: String = ""
-       
     
     
     

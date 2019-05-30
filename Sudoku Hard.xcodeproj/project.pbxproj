@@ -22,7 +22,6 @@
 		963E5EB01FA1E897001D8FC3 /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963E5EAB1FA1E897001D8FC3 /* AmazonAd.framework */; };
 		963E5EB11FA1E897001D8FC3 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963E5EAC1FA1E897001D8FC3 /* Chartboost.framework */; };
 		963E5EB21FA1E897001D8FC3 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963E5EAD1FA1E897001D8FC3 /* GoogleMobileAds.framework */; };
-		963E5EB31FA1E897001D8FC3 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963E5EAE1FA1E897001D8FC3 /* RevMobAds.framework */; };
 		963E5EBE1FA1E910001D8FC3 /* AdManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E5EB51FA1E910001D8FC3 /* AdManagerView.swift */; };
 		963E5EBF1FA1E910001D8FC3 /* ADXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E5EB61FA1E910001D8FC3 /* ADXML.swift */; };
 		963E5EC01FA1E910001D8FC3 /* cclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 963E5EB91FA1E910001D8FC3 /* cclass.m */; };
@@ -79,7 +78,6 @@
 		963E5EAB1FA1E897001D8FC3 /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AmazonAd.framework; sourceTree = "<group>"; };
 		963E5EAC1FA1E897001D8FC3 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
 		963E5EAD1FA1E897001D8FC3 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		963E5EAE1FA1E897001D8FC3 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		963E5EB51FA1E910001D8FC3 /* AdManagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdManagerView.swift; path = Ad/AdManagerView.swift; sourceTree = "<group>"; };
 		963E5EB61FA1E910001D8FC3 /* ADXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ADXML.swift; path = Ad/ADXML.swift; sourceTree = "<group>"; };
 		963E5EB71FA1E910001D8FC3 /* Bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-header.h"; path = "Ad/Bridging-header.h"; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 				963E5EAF1FA1E897001D8FC3 /* AdColony.framework in Frameworks */,
 				963E5EB21FA1E897001D8FC3 /* GoogleMobileAds.framework in Frameworks */,
 				963E5EB01FA1E897001D8FC3 /* AmazonAd.framework in Frameworks */,
-				963E5EB31FA1E897001D8FC3 /* RevMobAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +237,6 @@
 				963E5EAB1FA1E897001D8FC3 /* AmazonAd.framework */,
 				963E5EAC1FA1E897001D8FC3 /* Chartboost.framework */,
 				963E5EAD1FA1E897001D8FC3 /* GoogleMobileAds.framework */,
-				963E5EAE1FA1E897001D8FC3 /* RevMobAds.framework */,
 				AC90B9B01E4A395B00FCE8F8 /* Sudoku */,
 				AC90B9AF1E4A395B00FCE8F8 /* Products */,
 				963E5EC51FA1E9CF001D8FC3 /* Frameworks */,
@@ -307,7 +303,7 @@
 					AC90B9AD1E4A395B00FCE8F8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 6SZC32EP3F;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -498,7 +494,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sudoku/Ad/Bridging-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -520,7 +517,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.phuongnguyenapp2018.sudoku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sudoku/Ad/Bridging-header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

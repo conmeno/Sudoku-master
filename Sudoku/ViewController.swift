@@ -26,6 +26,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         {
            setupDidload()
         }
+        self.interstitial = self.createAndLoadAd()
     }
     @IBAction func ShowADDrag(_ sender: Any) {
         Utility.OpenView(viewName: "AdView1", view: self)
@@ -159,7 +160,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         
         appDelegate.sudoku = SudokuPuzzle()
         var puzzleStr = ""
-        
+        showAdmobFull();
         if newGameType == "simple" {
             puzzleStr = appDelegate.randomPuzzle(puzzles: appDelegate.simplePuzzles)
         }
@@ -384,7 +385,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         //        }
         
         //iphonex 50
-        gBannerView = GADBannerView(frame: CGRect(x:0,y: 40,width: w,height: 50))
+        gBannerView = GADBannerView(frame: CGRect(x:0,y: 0,width: w,height: 50))
         gBannerView?.adUnitID = Utility.GBannerAdUnit
         print(Utility.GBannerAdUnit)
         gBannerView?.delegate = self
@@ -435,6 +436,33 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         
         
     }
+    
+    ///Google Full Ad function ==>real device
+    var interstitial: GADInterstitial!
+    func createAndLoadAd() -> GADInterstitial
+    {
+        let ad = GADInterstitial(adUnitID: Utility.GFullAdUnit)
+        print(Utility.GFullAdUnit)
+        let request = GADRequest()
+        
+        request.testDevices = [kGADSimulatorID, Utility.AdmobTestDeviceID]
+        
+        ad?.load(request)
+        
+        return ad!
+    }
+    func showAdmobFull()
+    {
+        
+        
+        if (self.interstitial.isReady)
+        {
+            self.interstitial.present(fromRootViewController: self)
+            self.interstitial = self.createAndLoadAd()
+        }
+    }
+    
+    ///
     ///=====================================================================================
     ///=====================================================================================
     ///=====================================================================================
