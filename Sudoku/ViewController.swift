@@ -288,6 +288,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
                         handler: { (UIAlertAction) -> Void in
                             puzzle?.clearAllConflictingCells()
                             self.puzzleView.setNeedsDisplay()
+                            self.showAdmobFull()
                     }))
                     self.present(secondaryAlertController, animated: true, completion: nil)
             }))
@@ -314,6 +315,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
                             puzzle?.clearAllCells()
                             //puzzle?.clearAllPencilsForEachCell()
                             self.puzzleView.setNeedsDisplay()
+                            self.showAdmobFull()
                     }))
                     self.present(secondaryAlertController, animated: true, completion: nil)
             }))
@@ -385,7 +387,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         //        }
         
         //iphonex 50
-        gBannerView = GADBannerView(frame: CGRect(x:0,y: 0,width: w,height: 50))
+        gBannerView = GADBannerView(frame: CGRect(x:0,y: 50,width: w,height: 50))
         gBannerView?.adUnitID = Utility.GBannerAdUnit
         print(Utility.GBannerAdUnit)
         gBannerView?.delegate = self
