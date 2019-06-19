@@ -69,7 +69,7 @@ class ADXML: NSObject, XMLParserDelegate
         {
             UserDefaults.standard.set(boolSTR, forKey:"check-VPN")
             UserDefaults.standard.synchronize()
-            UserDefaults.standard.set(false, forKey:"adOnline")
+            UserDefaults.standard.set(false, forKey:"adOnline2")
             UserDefaults.standard.synchronize()
 
 

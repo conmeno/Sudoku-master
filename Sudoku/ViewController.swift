@@ -19,13 +19,13 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        let myad = MyAd(root: self)
-        myad.ViewDidload()
-        if(Utility.isAd2)
-        {
-           setupDidload()
-        }
+//
+//        let myad = MyAd(root: self)
+//        myad.ViewDidload()
+//        if(Utility.isAd2)
+//        {
+//           setupDidload()
+ //       }
         self.interstitial = self.createAndLoadAd()
     }
     @IBAction func ShowADDrag(_ sender: Any) {

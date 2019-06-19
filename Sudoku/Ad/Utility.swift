@@ -73,10 +73,10 @@ class Utility {
  
         
         
-        if(UserDefaults.standard.object(forKey: "adOnline") != nil)
+        if(UserDefaults.standard.object(forKey: "adOnline2") != nil)
         {
-            Utility.CheckOnline = UserDefaults.standard.object(forKey:"adOnline") as! Bool
-            print(UserDefaults.standard.object(forKey:"adOnline")!)
+            Utility.CheckOnline = UserDefaults.standard.object(forKey:"adOnline2") as! Bool
+            print(UserDefaults.standard.object(forKey:"adOnline2")!)
         }
         
         
@@ -147,71 +147,7 @@ class Utility {
                 isAd8 = UserDefaults.standard.object(forKey:"ad8") as! Bool
                 
             }
-        
-        //}
-        /*else
-        {
-        
-            //ad1 admob full
-            if(UserDefaults.standard.object(forKey:"online-ad1") != nil)
-            {
-                isAd1 = UserDefaults.standard.object(forKey:"online-ad1") as! Bool
-                
-            }
-            
-            //ad2 banner
-            
-            if(UserDefaults.standard.object(forKey:"online-ad2") != nil)
-            {
-                isAd2 = UserDefaults.standard.object(forKey:"online-ad2") as! Bool
-                
-            }
-            
-            
-            //ad3 ...
-            
-            if(UserDefaults.standard.object(forKey:"online-ad3") != nil)
-            {
-                isAd3 = UserDefaults.standard.object(forKey:"online-ad3") as! Bool
-                
-            }
-            
-            if(UserDefaults.standard.object(forKey:"online-ad4") != nil)
-            {
-                isAd4 = UserDefaults.standard.object(forKey:"online-ad4") as! Bool
-                
-            }
-            
-            
-            if(UserDefaults.standard.object(forKey:"online-ad5") != nil)
-            {
-                isAd5 = UserDefaults.standard.object(forKey:"online-ad5") as! Bool
-                
-            }
-            
-            
-            
-            
-            if(UserDefaults.standard.object(forKey:"online-ad6") != nil)
-            {
-                isAd6 = UserDefaults.standard.object(forKey:"online-ad6") as! Bool
-                
-            }
-            
-            if(UserDefaults.standard.object(forKey:"online-ad7") != nil)
-            {
-                isAd7 = UserDefaults.standard.object(forKey:"online-ad7") as! Bool
-                
-            }
-            if(UserDefaults.standard.object(forKey:"online-ad8") != nil)
-            {
-                isAd8 = UserDefaults.standard.object(forKey:"online-ad8") as! Bool
-                
-            }
-        }
-        */
-        
-
+       
         
         
         if(UserDefaults.standard.object(forKey:"check-VPN") != nil)
