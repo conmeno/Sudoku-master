@@ -22,7 +22,7 @@ class ButtonsView: UIView {
         let tileImage = UIImage(named: "ButtonTileSquared")
         for tag in 1 ... 12 {
             let button = self.viewWithTag(tag) as! UIButton
-            button.setBackgroundImage(tileImage, for: UIControlState())
+            button.setBackgroundImage(tileImage, for: UIControl.State())
             // button.backgroundColor = UIColor.clear // transparent
         }
     }

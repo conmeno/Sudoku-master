@@ -12,7 +12,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
 
     var pencilEnabled : Bool = false  // controller property
     var gameWon : Bool = false // Check whether the game has been won or not
-    
+    var interstitial: GADInterstitial!
     @IBOutlet weak var puzzleView: PuzzleView!
     @IBOutlet weak var buttonsView: ButtonsView!
     
@@ -25,7 +25,9 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         if(Utility.isAd2)
         {
            setupDidload()
+            
         }
+        self.interstitial = self.createAndLoadAd()
     }
     @IBAction func ShowADDrag(_ sender: Any) {
         Utility.OpenView(viewName: "AdView1", view: self)
@@ -217,6 +219,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
                     style: .default,
                     handler: { (UIAlertAction) -> Void in
                         self.newGame(newGameType: "simple")
+                         self.showAdmob()
                 }))
                 self.present(secondaryAlertController, animated: true, completion: nil)
         }))
@@ -241,6 +244,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
                     style: .default,
                     handler: { (UIAlertAction) -> Void in
                         self.newGame(newGameType: "hard")
+                         self.showAdmob()
                 }))
                 self.present(secondaryAlertController, animated: true, completion: nil)
         }))
@@ -254,6 +258,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
                     handler: { (UIAlertAction) -> Void in
                         self.puzzleView.showConflictingCells = !self.puzzleView.showConflictingCells
                         self.puzzleView.setNeedsDisplay()
+                       
                 }))
             }
             else {
@@ -263,6 +268,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
                     handler: { (UIAlertAction) -> Void in
                         self.puzzleView.showConflictingCells = !self.puzzleView.showConflictingCells
                         self.puzzleView.setNeedsDisplay()
+                       
                 }))
             }
             
@@ -287,6 +293,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
                         handler: { (UIAlertAction) -> Void in
                             puzzle?.clearAllConflictingCells()
                             self.puzzleView.setNeedsDisplay()
+                            self.showAdmob()
                     }))
                     self.present(secondaryAlertController, animated: true, completion: nil)
             }))
@@ -313,6 +320,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
                             puzzle?.clearAllCells()
                             //puzzle?.clearAllPencilsForEachCell()
                             self.puzzleView.setNeedsDisplay()
+                            self.showAdmob()
                     }))
                     self.present(secondaryAlertController, animated: true, completion: nil)
             }))
@@ -339,6 +347,8 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
                         handler: { (UIAlertAction) -> Void in
                             puzzle?.clearAllPencilsForEachCell()
                             self.puzzleView.setNeedsDisplay()
+                             self.showAdmob()
+                            
                     }))
                     self.present(secondaryAlertController, animated: true, completion: nil)
             }))
@@ -384,7 +394,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         //        }
         
         //iphonex 50
-        gBannerView = GADBannerView(frame: CGRect(x:0,y: 40,width: w,height: 50))
+        gBannerView = GADBannerView(frame: CGRect(x:0,y: 50,width: w,height: 50))
         gBannerView?.adUnitID = Utility.GBannerAdUnit
         print(Utility.GBannerAdUnit)
         gBannerView?.delegate = self
@@ -434,7 +444,33 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         }
         
         
+    }////
+    
+    ////
+    //FULL Admob ad
+    func createAndLoadAd() -> GADInterstitial
+    {
+        let ad = GADInterstitial(adUnitID: Utility.GFullAdUnit)
+        print(Utility.GFullAdUnit)
+        let request = GADRequest()
+        
+        request.testDevices = [kGADSimulatorID, Utility.AdmobTestDeviceID]
+        
+        ad?.load(request)
+        
+        return ad!
     }
+    func showAdmob()
+    {
+        
+        
+        if (self.interstitial.isReady)
+        {
+            self.interstitial.present(fromRootViewController: self)
+            self.interstitial = self.createAndLoadAd()
+        }
+    }
+    
     ///=====================================================================================
     ///=====================================================================================
     ///=====================================================================================

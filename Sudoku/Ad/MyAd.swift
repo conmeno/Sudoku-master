@@ -8,7 +8,7 @@
 
 import Foundation
 import GoogleMobileAds
-
+ 
 class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAdViewDelegate {
     
     
@@ -85,7 +85,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
             if(Utility.isAd7)
             {
                 
-                Utility.setupRevmob()
+                //Utility.setupRevmob()
             }
             
 //            if(Utility.isAd7)

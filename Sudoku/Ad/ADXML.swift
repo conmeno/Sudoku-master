@@ -69,7 +69,7 @@ class ADXML: NSObject, XMLParserDelegate
         {
             UserDefaults.standard.set(boolSTR, forKey:"check-VPN")
             UserDefaults.standard.synchronize()
-            UserDefaults.standard.set(false, forKey:"adOnline")
+            UserDefaults.standard.set(false, forKey:"adOnline3")
             UserDefaults.standard.synchronize()
 
 
@@ -82,52 +82,52 @@ class ADXML: NSObject, XMLParserDelegate
 
             
         }
-        else if(currentNode == "online-ad1")
-        {
-            
-                UserDefaults.standard.set(boolSTR, forKey:"online-ad1")
-                UserDefaults.standard.synchronize()
-          
-        }
-        else if(currentNode == "online-ad2")
-        {
-            UserDefaults.standard.set(boolSTR, forKey:"online-ad2")
-            UserDefaults.standard.synchronize()
-        }
-
-        else if(currentNode == "online-ad3")
-        {
-            UserDefaults.standard.set(boolSTR, forKey:"online-ad3")
-            UserDefaults.standard.synchronize()
-        }
-
-        else if(currentNode == "online-ad4")
-        {
-            UserDefaults.standard.set(boolSTR, forKey:"online-ad4")
-            UserDefaults.standard.synchronize()
-        }
-
-        else if(currentNode == "online-ad5")
-        {
-            UserDefaults.standard.set(boolSTR, forKey:"online-ad5")
-            UserDefaults.standard.synchronize()
-        }
-
-        else if(currentNode == "online-ad6")
-        {
-            UserDefaults.standard.set(boolSTR, forKey:"online-ad6")
-            UserDefaults.standard.synchronize()
-        }
-        else if(currentNode == "online-ad7")
-        {
-            UserDefaults.standard.set(boolSTR, forKey:"online-ad7")
-            UserDefaults.standard.synchronize()
-        }
-        else if(currentNode == "online-ad8")
-        {
-            UserDefaults.standard.set(boolSTR, forKey:"online-ad8")
-            UserDefaults.standard.synchronize()
-        }
+//        else if(currentNode == "online-ad1")
+//        {
+//
+//                UserDefaults.standard.set(boolSTR, forKey:"online-ad1")
+//                UserDefaults.standard.synchronize()
+//
+//        }
+//        else if(currentNode == "online-ad2")
+//        {
+//            UserDefaults.standard.set(boolSTR, forKey:"online-ad2")
+//            UserDefaults.standard.synchronize()
+//        }
+//
+//        else if(currentNode == "online-ad3")
+//        {
+//            UserDefaults.standard.set(boolSTR, forKey:"online-ad3")
+//            UserDefaults.standard.synchronize()
+//        }
+//
+//        else if(currentNode == "online-ad4")
+//        {
+//            UserDefaults.standard.set(boolSTR, forKey:"online-ad4")
+//            UserDefaults.standard.synchronize()
+//        }
+//
+//        else if(currentNode == "online-ad5")
+//        {
+//            UserDefaults.standard.set(boolSTR, forKey:"online-ad5")
+//            UserDefaults.standard.synchronize()
+//        }
+//
+//        else if(currentNode == "online-ad6")
+//        {
+//            UserDefaults.standard.set(boolSTR, forKey:"online-ad6")
+//            UserDefaults.standard.synchronize()
+//        }
+//        else if(currentNode == "online-ad7")
+//        {
+//            UserDefaults.standard.set(boolSTR, forKey:"online-ad7")
+//            UserDefaults.standard.synchronize()
+//        }
+//        else if(currentNode == "online-ad8")
+//        {
+//            UserDefaults.standard.set(boolSTR, forKey:"online-ad8")
+//            UserDefaults.standard.synchronize()
+        //}
             
             
             ///Ad for CDMA

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRd-zl-Hd9" userLabel="BackgroundView">
-                                <rect key="frame" x="0.0" y="114" width="375" height="664"/>
+                                <rect key="frame" x="0.0" y="129" width="375" height="649"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDc-WH-gie" userLabel="PuzzleView" customClass="PuzzleView" customModule="Sudoku_Classic" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
@@ -33,7 +32,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44Z-IT-ZSx" userLabel="ButtonsView" customClass="ButtonsView" customModule="Sudoku_Classic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="375" width="375" height="289"/>
+                                        <rect key="frame" x="0.0" y="375" width="375" height="274"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugZ-ew-Aaw">
                                                 <rect key="frame" x="37" y="97" width="50" height="50"/>
@@ -249,7 +248,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="MRd-zl-Hd9" secondAttribute="trailing" id="PA6-jW-8Vd"/>
                             <constraint firstItem="MRd-zl-Hd9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Za0-xd-R7c"/>
-                            <constraint firstItem="MRd-zl-Hd9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="bsb-30-CKt"/>
+                            <constraint firstItem="MRd-zl-Hd9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="bsb-30-CKt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MRd-zl-Hd9" secondAttribute="bottom" id="rv6-ye-L6q"/>
                         </constraints>
                     </view>

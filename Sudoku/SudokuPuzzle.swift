@@ -57,7 +57,7 @@ class SudokuPuzzle {
     func loadPuzzle(puzzleString: String) {
         
         // Parse the string into an array of characters: stackoverflow.com/questions/25921204/convert-swift-string-to-array
-        let characters = puzzleString.characters.map { String($0) }
+        let characters = puzzleString.map { String($0) }
         
         var count = 0
         for r in 0 ..< 9 {

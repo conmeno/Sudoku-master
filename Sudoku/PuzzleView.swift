@@ -94,10 +94,10 @@ class PuzzleView: UIView {
         }
         
         let boldFont = UIFont(name: "Helvetica-Bold", size: 30)
-        var fixedAttributes = [NSAttributedStringKey.font : boldFont!, NSAttributedStringKey.foregroundColor : UIColor.black]
+        var fixedAttributes = [NSAttributedString.Key.font : boldFont!, NSAttributedString.Key.foregroundColor : UIColor.black]
         
         let pencilFont = UIFont(name: "Helvetica-Bold", size: 12)
-        let pencilAttributes = [NSAttributedStringKey.font : pencilFont!, NSAttributedStringKey.foregroundColor : UIColor.black]
+        let pencilAttributes = [NSAttributedString.Key.font : pencilFont!, NSAttributedString.Key.foregroundColor : UIColor.black]
         
         let gridSize = boardRect.width
         let delta = gridSize/3
@@ -115,13 +115,13 @@ class PuzzleView: UIView {
                     
                     // Check to see if the number is fixed. Print red if it is
                     if puzzle!.numberIsFixedAtRow(row: row, column: col) {
-                        fixedAttributes = [NSAttributedStringKey.font : boldFont!, NSAttributedStringKey.foregroundColor : UIColor.blue]
+                        fixedAttributes = [NSAttributedString.Key.font : boldFont!, NSAttributedString.Key.foregroundColor : UIColor.blue]
                     }
                     else if showConflictingCells && puzzle!.isConflictingEntryAtCell(number: puzzle!.puzzle[row][col].number, row: row, column: col) {
-                        fixedAttributes = [NSAttributedStringKey.font : boldFont!, NSAttributedStringKey.foregroundColor : UIColor.red]
+                        fixedAttributes = [NSAttributedString.Key.font : boldFont!, NSAttributedString.Key.foregroundColor : UIColor.red]
                     }
                     else {
-                        fixedAttributes = [NSAttributedStringKey.font : boldFont!, NSAttributedStringKey.foregroundColor : UIColor.black]
+                        fixedAttributes = [NSAttributedString.Key.font : boldFont!, NSAttributedString.Key.foregroundColor : UIColor.black]
                     }
                     
                     let text = "\(puzzle!.puzzle[row][col].number)" as NSString

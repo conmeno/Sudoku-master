@@ -19,7 +19,6 @@
 #import <AmazonAd/AmazonAdView.h>
 #import <AmazonAd/AmazonAdError.h>
 #import <AmazonAd/AmazonAdOptions.h>
-#import <RevMobAds/RevMobAds.h>
 #import <AdColony/AdColony.h>
 
 
