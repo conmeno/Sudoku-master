@@ -9,6 +9,8 @@
 import UIKit
 import GoogleMobileAds
 class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDelegate {
+    
+   
 
     var pencilEnabled : Bool = false  // controller property
     var gameWon : Bool = false // Check whether the game has been won or not
@@ -20,17 +22,21 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let myad = MyAd(root: self)
-        myad.ViewDidload()
-        if(Utility.isAd2)
-        {
-           setupDidload()
-            
-        }
-        self.interstitial = self.createAndLoadAd()
+//        let myad = MyAd(root: self)
+//        myad.ViewDidload()
+//        if(Utility.isAd2)
+//        {
+//           setupDidload()
+//
+//        }
+        //self.interstitial = self.createAndLoadInterstitial()
+      
+      
+             
     }
     @IBAction func ShowADDrag(_ sender: Any) {
         Utility.OpenView(viewName: "AdView1", view: self)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -385,13 +391,8 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
     func ShowAdmobBanner()
     {
         
-        //let viewController = appDelegate1.window!.rootViewController as! GameViewController
+         
         let w = self.view.bounds.width
-        //let h = self.view.bounds.height
-        //        if(!AdmobBannerTop)
-        //        {
-        //            AdmobLocationY = h - 50
-        //        }
         
         //iphonex 50
         gBannerView = GADBannerView(frame: CGRect(x:0,y: 50,width: w,height: 50))
@@ -402,9 +403,11 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         self.view?.addSubview(gBannerView)
         
         let request = GADRequest()
-        request.testDevices = [kGADSimulatorID , Utility.AdmobTestDeviceID];
+        
+        request.testDevices = [kGADSimulatorID as! String, "2077ef9a63d2b398840261c8221a0c9a"]
         gBannerView?.load(request)
-        //gBannerView?.hidden = true
+        //gBannerView?.hidden = true 
+        
         
     }
     func CanShowAd()->Bool
@@ -448,18 +451,29 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
     
     ////
     //FULL Admob ad
-    func createAndLoadAd() -> GADInterstitial
-    {
-        let ad = GADInterstitial(adUnitID: Utility.GFullAdUnit)
-        print(Utility.GFullAdUnit)
-        let request = GADRequest()
-        
-        request.testDevices = [kGADSimulatorID, Utility.AdmobTestDeviceID]
-        
-        ad?.load(request)
-        
-        return ad!
-    }
+//    func createAndLoadAd() -> GADInterstitial
+//    {
+//        let ad = GADInterstitial(adUnitID: Utility.GFullAdUnit)
+//        print(Utility.GFullAdUnit)
+//        let request = GADRequest()
+//
+//        request.testDevices = [kGADSimulatorID, Utility.AdmobTestDeviceID]
+//
+//        ad?.load(request)
+//
+//        return ad!
+//    }
+    
+    fileprivate func createAndLoadInterstitial() -> GADInterstitial{
+       interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+       let request = GADRequest()
+       // Request test ads on devices you specify. Your test device ID is printed to the console when
+       // an ad request is made.
+       request.testDevices = [kGADSimulatorID as! String, "2077ef9a63d2b398840261c8221a0c9a"]
+       interstitial.load(request)
+        return interstitial
+     }
+
     func showAdmob()
     {
         
@@ -467,7 +481,7 @@ class ViewController: UIViewController,GADBannerViewDelegate, GADInterstitialDel
         if (self.interstitial.isReady)
         {
             self.interstitial.present(fromRootViewController: self)
-            self.interstitial = self.createAndLoadAd()
+            self.interstitial = self.createAndLoadInterstitial()
         }
     }
     

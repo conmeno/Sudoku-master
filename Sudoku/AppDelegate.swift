@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import GoogleMobileAds
 func sandboxArchivePath() -> String {
     let dir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
     return dir.appendingPathComponent("savedSudokuPuzzle.plist")
@@ -54,35 +54,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //==========FOR AD============
         //============================
         
-        Utility.SetUpAdData()
-        if(Utility.isAd3)
-        {
-            AmazonAdRegistration.shared().setAppKey(Utility.Amazonkey)
-            AmazonAdRegistration.shared().setLogging(true)
-        }
-        if(Utility.isAd4)
-        {
-            AdColony.configure(withAppID: Utility.AdcolonyAppID, zoneIDs: [Utility.AdcolonyZoneID], delegate: nil, logging: true)
-        }
-        //        if(Utility.isAd7)
-        //        {
-        //
-        //        }
+//        Utility.SetUpAdData()
+//        if(Utility.isAd3)
+//        {
+//            AmazonAdRegistration.shared().setAppKey(Utility.Amazonkey)
+//            AmazonAdRegistration.shared().setLogging(true)
+//        }
+//        if(Utility.isAd4)
+//        {
+//            //AdColony.configure(withAppID: Utility.AdcolonyAppID, zoneIDs: [Utility.AdcolonyZoneID], delegate: nil, logging: true)
+//        }
+//        
+//        
+//        if(Utility.isAd5 || Utility.isAd6)
+//        {
+//            
+//        }
+//        
+//        if(Utility.isAd8)
+//        {
+//            
+//        }
         
-        if(Utility.isAd5 || Utility.isAd6)
-        {
-            Chartboost.start(withAppId: Utility.CBAppID, appSignature: Utility.CBSign, delegate: nil)
-            print(Utility.CBAppID + " " + Utility.CBSign)
-        }
-        
-        if(Utility.isAd8)
-        {
-            
-        }
-        
-        //============================
-        //======END FOR AD============
-        //============================
+        //google admob
+        //GADMobileAds.sharedInstance().start(completionHandler: nil)
+
         return true
     }
 

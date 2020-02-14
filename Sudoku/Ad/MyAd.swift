@@ -57,7 +57,7 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         {
             if(Utility.isAd1)
             {
-                self.interstitial = self.createAndLoadAd()
+                self.interstitial = self.createAndLoadInterstitial()
                 showAdmob()
                 
                 self.timerAd10 = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(timerAd10Method), userInfo: nil, repeats: true)
@@ -67,39 +67,18 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
             
             if(Utility.isAd4)
             {
-                showAdcolony()
-                
+                  
             }
             
             
             if(Utility.isAd5)
             {
                 //charboost
-                showChartBoost()
-            }
-            if(Utility.isAd6)
-            {
-                //charboost
-               showChartRewardVideo()
-            }
-            if(Utility.isAd7)
-            {
-                
-                //Utility.setupRevmob()
+                //showChartBoost()
             }
             
-//            if(Utility.isAd7)
-//            {
-//                showVungle()
-//            }
-//            
-//            
-//            if(Utility.isAd8)
-//            {
-//    
-//                Supersonic.sharedInstance().loadIS()
-//                Supersonic.sharedInstance().showISWithViewController(viewController)
-//            }
+            
+ 
             
             if(Utility.isAd4 || Utility.isAd7 || Utility.isAd5 || Utility.isAd6 || Utility.isAd8 )
             {
@@ -130,33 +109,43 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
         }
         
     }
-       func showAdcolony()
-    {
-        AdColony.playVideoAd(forZone: Utility.AdcolonyZoneID, with: nil)
-    }
+//       func showAdcolony()
+//    {
+//        AdColony.playVideoAd(forZone: Utility.AdcolonyZoneID, with: nil)
+//    }
     
-    func createAndLoadAd() -> GADInterstitial
-    {
-        let ad = GADInterstitial(adUnitID: Utility.GFullAdUnit)
-        print(Utility.GFullAdUnit)
-        let request = GADRequest()
-        
-        request.testDevices = [kGADSimulatorID, Utility.AdmobTestDeviceID]
-        
-        ad?.load(request)
-        
-        return ad!
-    }
-    func showAdmob()
-    {
-        
-        
-        if (self.interstitial.isReady)
-        {
-            self.interstitial.present(fromRootViewController: viewController)
-            self.interstitial = self.createAndLoadAd()
-        }
-    }
+//    func createAndLoadAd() -> GADInterstitial
+//    {
+//        let ad = GADInterstitial(adUnitID: Utility.GFullAdUnit)
+//        print(Utility.GFullAdUnit)
+//        let request = GADRequest()
+//
+//        request.testDevices = [kGADSimulatorID, Utility.AdmobTestDeviceID]
+//
+//        ad?.load(request)
+//
+//        return ad!
+//    }
+      fileprivate func createAndLoadInterstitial() -> GADInterstitial{
+         interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+         let request = GADRequest()
+         // Request test ads on devices you specify. Your test device ID is printed to the console when
+         // an ad request is made.
+         request.testDevices = [kGADSimulatorID as! String, "2077ef9a63d2b398840261c8221a0c9a"]
+         interstitial.load(request)
+          return interstitial
+       }
+
+      func showAdmob()
+      {
+          
+          
+          if (self.interstitial.isReady)
+          {
+              self.interstitial.present(fromRootViewController: viewController)
+              self.interstitial = self.createAndLoadInterstitial()
+          }
+      }
     
     
     
@@ -178,25 +167,16 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
             
             if(Utility.isAd4)
             {
-                showAdcolony()
+                //showAdcolony()
                 
             }
-//            if(Utility.isAd7)
-//            {
-//                
-//            }
+  
             if(Utility.isAd5)
             {
-               showChartBoost()
+               //showChartBoost()
                 
             }
-            
-            if(Utility.isAd6)
-            {
-               //chartboost reward
-                showChartRewardVideo()            }
-            
-            
+             
             
         }
         
@@ -213,57 +193,8 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     
     
     
-        func showChartBoost()
-        {
-            //Chartboost.closeImpression()
-            Chartboost.showInterstitial("Home" + String(AdNumber))
-            AdNumber += 1
-            print(AdNumber)
-        }
+       
     
-    func showChartRewardVideo()
-    {
-        
-        Chartboost.showRewardedVideo("rewarded " + String(RewardAdNumber))
-        RewardAdNumber += 1
-          print(RewardAdNumber)
-    }
-    
-    
-    
-    //GADBannerViewDelegate
-    //    func adViewDidReceiveAd(view: GADBannerView!) {
-    //        print("adViewDidReceiveAd:\(view)");
-    //        if(!Utility.CanShowAd())
-    //        {
-    //            view.removeFromSuperview()
-    //            Utility.isStopAdmobAD = true
-    //            print("Stop showing Ad from admob new func......")
-    //        }
-    //        //relayoutViews()
-    //    }
-    //
-    //    func adView(view: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
-    //        print("\(view) error:\(error)")
-    //
-    //        //relayoutViews()
-    //    }
-    //
-    //    func adViewWillPresentScreen(adView: GADBannerView!) {
-    //        print("adViewWillPresentScreen:\(adView)")
-    //
-    //        //relayoutViews()
-    //    }
-    //
-    //    func adViewWillLeaveApplication(adView: GADBannerView!) {
-    //        print("adViewWillLeaveApplication:\(adView)")
-    //    }
-    //
-    //    func adViewWillDismissScreen(adView: GADBannerView!) {
-    //        print("adViewWillDismissScreen:\(adView)")
-    //
-    //        // relayoutViews()
-    //    }
     
     
     
